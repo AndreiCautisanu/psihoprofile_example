@@ -39,8 +39,8 @@ selected_model_id = model_options[selected_model_name]
 # System prompt (optional)
 st.sidebar.subheader("System Prompt (Optional)")
 system_prompt = st.sidebar.text_area(
-    "Set context for the model",
-    value="You are an AI assistant helping with psychology research. Provide accurate and helpful information.",
+    "Prompt de context pentru model",
+    value="Esti un asistent al unui profesor universitar in psihologie. Vei oferi raspunsuri relevante stiintific, fara opinii neverificate sau nefondate, raspunde prompt prin informatii factuale.",
     height=100
 )
 
@@ -107,15 +107,12 @@ if user_prompt:
                 st.error(f"Error: {str(e)}")
 
 # Display information
-st.subheader("How to Use")
+st.subheader("Ghid initial")
 st.info("""
-1. Select a model from the sidebar
-2. Type your psychology-related question in the chat
-3. View the response
-4. Check Opik for detailed traces and metrics
-
-This demo uses Opik to track LLM calls with the `@opik.track()` decorator and the OpenRouter integration.
-All interactions are logged as traces in Opik, allowing you to analyze the performance and behavior of different models.
+1. Selectati un model din partea stanga
+2. Optional, modificati promptul de context, tot din partea stanga
+3. Trimiteti un mesaj catre modelul de limbaj si asteptati raspunsul
+4. Verificati existenta informatiilor in proiectul "psihoprofile" din Opik
 """)
 
 # Footer
