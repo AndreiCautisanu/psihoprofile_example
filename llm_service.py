@@ -4,13 +4,15 @@ import opik
 from opik.integrations.openai import track_openai
 import openai
 from dotenv import load_dotenv
+import streamlit as st
 
 # Load environment variables
 load_dotenv()
 
 # Get API key from environment variables
-OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
-os.environ["OPIK_API_KEY"] = "6dJsjTs0Q3IkZza7ifYfC1Rtv"
+os.environ["OPENROUTER_API_KEY"] = st.secrets["OPENROUTER_API_KEY"]
+OPENROUTER_API_KEY = os.environ["OPENROUTER_API_KEY"]
+os.environ["OPIK_API_KEY"] = st.secrets["OPIK_API_KEY"]
 os.environ["OPIK_PROJECT_NAME"] = "psihoprofile"
 
 # Initialize OpenAI client for OpenRouter
