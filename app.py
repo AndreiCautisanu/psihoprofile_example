@@ -6,7 +6,6 @@ from llm_service import get_available_models, get_llm_response
 
 # Load environment variables
 load_dotenv()
-opik.configure()
 
 # Check if OpenRouter API key is set
 if not os.getenv("OPENROUTER_API_KEY"):
@@ -15,7 +14,7 @@ if not os.getenv("OPENROUTER_API_KEY"):
 
 # Page configuration
 st.set_page_config(
-    page_title="Psychology LLM Research with Opik",
+    page_title="LLM Psihoprofile Test",
     page_icon="🧠",
     layout="wide"
 )
