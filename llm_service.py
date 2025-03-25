@@ -14,7 +14,7 @@ os.environ["OPENROUTER_API_KEY"] = st.secrets["OPENROUTER_API_KEY"]
 OPENROUTER_API_KEY = os.environ["OPENROUTER_API_KEY"]
 os.environ["OPIK_API_KEY"] = st.secrets["OPIK_API_KEY"]
 os.environ["OPIK_PROJECT_NAME"] = "psihoprofile"
-
+os.environ["OPIK_WORKSPACE"] = st.secrets["OPIK_WORKSPACE"]
 # Initialize OpenAI client for OpenRouter
 client = openai.OpenAI(
     base_url="https://openrouter.ai/api/v1",

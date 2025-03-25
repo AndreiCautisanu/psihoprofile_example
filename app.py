@@ -13,13 +13,6 @@ if not os.getenv("OPENROUTER_API_KEY"):
     st.error("OpenRouter API key not found. Please add it to the .env file.")
     st.stop()
 
-# Initialize Opik (if needed)
-try:
-    opik.configure()
-except Exception as e:
-    st.warning(f"Opik initialization warning: {str(e)}")
-    st.info("You may need to run 'opik configure' in your terminal to set up Opik.")
-
 # Page configuration
 st.set_page_config(
     page_title="Psychology LLM Research with Opik",
